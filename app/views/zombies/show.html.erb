@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @zombie.name %>
+</p>
+
+<p>
+  <strong>Weapons:</strong>
+  <%= @zombie.weapons %>
+</p>
+
+<p>
+  <strong>Brain:</strong>
+  <%= @zombie.brain %>
+</p>
+
+<p>
+  <strong>Dead:</strong>
+  <%= @zombie.dead %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @zombie.weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @zombie.height %>
+</p>
+
+<%= link_to 'Edit', edit_zombie_path(@zombie) %> |
+<%= link_to 'Back', zombies_path %>
