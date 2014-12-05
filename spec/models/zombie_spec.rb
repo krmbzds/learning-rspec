@@ -17,4 +17,11 @@ RSpec.describe Zombie, :type => :model do
     expect { zombie.save }.to change { Zombie.count }.by(1)
   end
 
+  it 'raises an error if saved without a name' do
+    zombie = Zombie.new
+    expect { zombie.save! }.to raise_error(
+      ActiveRecord::RecordInvalid
+    )
+  end
+
 end
