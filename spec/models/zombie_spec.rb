@@ -12,4 +12,9 @@ RSpec.describe Zombie, :type => :model do
     expect(zombie.name).to match(/Tyrone \d\d\d Hayes/)
   end
 
+  it 'changes the number of Zombies' do
+    zombie = Zombie.new(:name => 'Dickbutt')
+    expect { zombie.save }.to change { Zombie.count }.by(1)
+  end
+
 end
